@@ -37,6 +37,10 @@ android {
 
 dependencies {
 
+
+    implementation ("com.google.firebase:firebase-auth")
+    implementation ("com.google.firebase:firebase-firestore")
+    implementation ("com.google.firebase:firebase-analytics")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -59,5 +63,10 @@ dependencies {
         // See https://firebase.google.com/docs/android/setup#available-libraries
         // For example, add the dependencies for Firebase Authentication and Cloud Firestore
         implementation("com.google.firebase:firebase-auth")
-        implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-firestore:24.9.1") {
+        exclude(group = "com.google.firebase", module = "firebase-common")
+    }
+
 }
+
+
